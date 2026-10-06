@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: orders-api
+  description: Order management API
+  annotations:
+    github.com/project-slug: kreshnikpirevanz/orders-api
+    backstage.io/source-location: url:https://github.com/kreshnikpirevanz/orders-api
+    # Golden-path convention: the label on every workload in deploy/ matches this.
+    backstage.io/kubernetes-id: orders-api
+    backstage.io/kubernetes-namespace: poc-apps
+  tags: [nodejs]
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:default/idp-team
+  system: platform-poc
